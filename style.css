@@ -1,0 +1,500 @@
+/*
+Theme Name: AP Maven
+Description: Conversion Study for AP Maven
+Author: AgentImage
+Author URI: http://www.agentimage.com
+Version: 1.6.0
+Tags: one-column, two-columns, right-sidebar, custom-menu, full-width-template, sticky-post
+License: Proprietary
+License URI: http://www.agentimage.com
+Template: aios-starter-theme
+*/
+
+/*
+
+TABLE OF CONTENTS
+
+1. Variables
+2. Custom CSS
+3. IP styles
+4. MEDIA QUERIES ARE AUTOMATICALLY REMOVED FROM THIS FILE, they must be placed in style-media-queries.css
+
+*/
+
+/*******************************************************
+ *
+ * 1. Variables
+ *
+ *******************************************************/
+
+ @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+:root {
+    /** Font default */
+    --font-family-lora: 'Lora', serif;
+    --font-family-spartan: 'League Spartan', sans-serif;
+    --font-family-default: var(--font-family-lora);
+    --font-family-title: var(--font-family-spartan);
+    --font-size-default: 14px;
+    --font-size-title: 18px;
+    --font-color-default: #000000;
+    --font-color-title: #6c757d;
+
+    /* Transitions */
+    --transition-ease: 0.6s ease;
+    --transition-ease-out: 0.6s ease-out;
+    --transition-ease-in: 0.6s ease-in;
+    --transition-linear: 0.6s linear;
+    
+    /** Use for input, button, and any other element */
+    --background-color: #ffffff;
+    --background-color-accent: #f9f9f9;
+    --primary: #2a2b2c;
+    --primary-color-accent: #19191a;
+    --secondary: #ffffff;
+    --primary-text-color: #333333;
+    --primary-text-color-light: #848484;
+}
+
+/*******************************************************
+ *
+ * 2. Navigation
+ *
+ *******************************************************/
+
+/* Sub Menu */
+#nav li {
+    position:relative;
+}
+
+#nav .sub-menu {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+    min-width: 201px;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    -webkit-transform: translate(0, 10px);
+    -ms-transform: translate(0, 10px);
+    transform: translate(0, 10px);
+    -webkit-transition: opacity .3s,visibility,.3s,-webkit-transform .3s;
+    transition: opacity .3s,visibility,.3s,-webkit-transform .3s;
+    -o-transition: transform .3s,opacity .3s,visibility,.3s;
+    transition: transform .3s,opacity .3s,visibility,.3s;
+    transition: transform .3s,opacity .3s,visibility,.3s,-webkit-transform .3s;
+    padding-top: 3px;
+}
+
+#nav > li > .sub-menu{
+    left: 50%;
+    -webkit-transform: translate(-50%, 10px);
+    -ms-transform: translate(-50%, 10px);
+    transform: translate(-50%, 10px);
+}
+
+#nav .sub-menu li{
+    position: relative;
+    background-color: var(--secondary);
+    z-index: 1;
+}
+
+#nav .sub-menu li:hover{
+    background-color: var(--primary);
+
+}
+
+#nav li:hover > .sub-menu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+    -webkit-transform: translate(0,0);
+    -ms-transform: translate(0,0);
+    transform: translate(0,0);
+}
+
+#nav > li:hover > .sub-menu {
+    -webkit-transform: translate(-50%,0);
+    -ms-transform: translate(-50%,0);
+    transform: translate(-50%,0);
+}
+
+
+#nav .sub-menu a {
+    color: var(--primary);
+    display: block;
+    padding: 10px;
+    -webkit-transition: background .3s, color .3s;
+    -o-transition: background .3s, color .3s;
+    transition: background .3s, color .3s;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    padding: 12px 0px;
+}
+
+
+
+#nav .sub-menu a:hover {
+    background: var(--primary);
+    color: var(--secondary);
+    text-decoration: none;
+}
+
+#nav .sub-menu .sub-menu {
+    margin-left: 100%;
+ 	top:0;
+}
+
+#nav .sub-menu li {
+    position: relative;
+}
+
+
+/*******************************************************
+ *
+ * 3. Custom CSS
+ *
+ *******************************************************/
+
+/* Start of Custom Global CSS */
+body{
+	font-family: var(--font-family-default);
+	font-size: var(--font-size-default);
+	background: #FFFFFF;
+	color: var(--font-color-default);
+	margin: 0;
+
+    /* Remove the comment from line 85 to 86 if the font issue in safari occurs */
+    /* -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; */
+}
+
+a:hover{
+    color: unset;
+}
+
+.position-fixed{
+    position: fixed !important; 
+}
+
+.font-family-default{
+    font-family: var(--font-family-default);
+}
+
+.font-family-title{
+    font-family: var(--font-family-title);
+}
+
+.container-spacer{
+    padding: 1.25%;
+}
+
+.btn.btn-default-white{
+    text-transform: uppercase;
+    border: 2px solid var(--primary);
+    border-radius: unset;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: var(--font-family-spartan);
+    display: inline-block;
+    padding: 18px 45px;
+    transition: all var(--transition-ease)
+}
+
+.btn.btn-default-white:hover{
+    background-color: var(--primary);
+    color: var(--secondary);
+}
+
+/* End of Custom Global CSS */
+
+
+/* Start of Header */
+header.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 4.063vw 5vw;
+    z-index: 9;
+    transition: all var(--transition-ease);
+    color: var(--secondary);
+}
+
+    header.header.scrolled{
+        padding: 35px 5%;
+        background-color: var(--primary);
+    }
+
+header.header .desktop-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header.header .desktop-menu .site-logo-link {
+    display: flex;
+    align-items: center;
+}
+
+    header.header .desktop-menu .site-logo-link i.ai-font-sothebys {
+        font-size: max(3.750vw, 60px);
+        display: block;
+    }
+
+    header.header .desktop-menu .site-logo-link h3{
+        font-size: max(1.500vw, 24px);
+        font-weight: 600;
+        font-family: var(--font-family-title);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+header.header ul#nav {
+    display: flex;
+}
+
+    header.header ul.menu > li{
+        position: relative;
+        padding: 0 15px;
+    }
+
+    header.header ul.menu > li a {
+        color: var(--secondary);
+        font-family: var(--font-family-title);
+        font-weight: 500;
+        font-size: max(0.813vw, 13px);
+        text-transform: uppercase;
+        padding: 10px 0;
+        display: block;
+        position: relative;
+    }
+
+    header.header ul#nav > li.menu-item > a::after{
+        display: block;
+        width: 0;
+        height: 2px;
+        background: var(--secondary);
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        transition: all var(--transition-ease);
+        content: "";
+    }
+    
+    header.header ul#nav > li.menu-item:hover > a::after{
+        width: 100%;
+    }
+
+.logo-divider {
+    height: 45px;
+    width: 2px;
+    margin: 0 27px;
+    background-color: var(--secondary);
+    opacity: 0.4;
+}
+/* End of Header */
+
+/* Start of Homepage Slider */
+.slider-images {
+    position: relative;
+}
+
+.banner-slider {
+    width: 100%;
+}
+
+    .banner-slider .slide img {
+        filter: brightness(0.6);
+        min-height: 100%;
+        height: 100vh;
+        width: 100vw;
+        object-fit: cover;
+    }
+/* End of Homepage Slider */
+
+/* Start of Homepage Banner Text */
+.banner-text {
+    position: absolute;
+    bottom: 45px;
+    right: 0;
+    width: 100%;
+    text-align: right;
+    color: var(--secondary);
+}
+
+    .banner-text .banner-text-above {
+        margin-bottom: 0;
+        line-height: 1.1;
+        font-size: max(2.188vw, 35px);
+        text-transform: capitalize;
+        font-style: italic;
+        text-shadow: 0px 1px 1px rgb(0 0 0 / 30%);
+        padding-bottom: 20px;
+    }
+
+    .banner-text .banner-text-below {
+        text-shadow: 0px 1px 1px rgb(0 0 0 / 30%);
+        font-size: 65px;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-family: var(--font-family-title);
+        letter-spacing: 0.05em;
+    }
+/* End of Homepage Banner Text */
+
+/* Start of Welcome Section */
+.homepage-welcome{
+    padding-top: 60px;
+}
+
+    .homepage-welcome .welcome-area .welcome-wrap {
+        display: flex;
+        flex-flow: row-reverse wrap;
+        align-items: center;
+    }
+
+    .homepage-welcome .welcome-area .welcome-content{
+        width: 55%;
+        padding-right: 8%;
+        padding-left: 6%;
+    }
+
+        .homepage-welcome .welcome-area .welcome-content h1 {
+            font-weight: 600;
+            font-size: 60px;
+            color: var(--primary);
+            font-family: var(--font-family-title);
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+        }
+
+            .homepage-welcome .welcome-area .welcome-content h1 em {
+                font-size: 30px;
+                display: block;
+                font-style: italic;
+                font-weight: 400;
+                padding-bottom: 15px;
+                color:  var(--primary-accent-color);
+            }
+
+            .homepage-welcome .welcome-area .welcome-content p {
+                font-size: 17px;
+                line-height: 1.7;
+                padding: 61px 0;
+            }
+
+    .homepage-welcome .welcome-area .welcome-image {
+        width: 45%;
+    }
+
+        .homepage-welcome .welcome-area .welcome-image img {
+            object-fit: cover;
+            object-position: center center;
+            width: 100%;
+            height: 100%;
+        }   
+
+/* End of Welcome Section */
+
+    
+/*******************************************************
+ *
+ * 4. IP Styles
+ *
+ *******************************************************/
+.ip-banner{
+    position: relative;
+    width: 100%;
+}
+    .ip-banner::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        background: rgba(0,0,0,.6);
+    }
+    .ip-banner canvas{
+        display: block;
+        position: relative;
+        z-index: 0;
+        width: 100%;
+        min-height: 250px;
+        background-color: var(--dark);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .ip-banner .container{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        z-index: 2;
+    }
+        .ip-banner h1 {
+            font-weight: 700;
+            font-size: 32px;
+            text-align: center;
+            color: #FFFFFF;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            line-height: 1.7;
+        }
+            .ip-banner h1 span{
+                display: block;
+                font-size: 24px;
+                font-weight: 400;
+                text-transform: none;
+                letter-spacing: 0.01em;
+            }
+/* Adjust minimum height of page area */
+#content-sidebar, #content-full{ min-height: 500px; margin-top: 20px;}
+
+/** Adjust width of content columns **/
+#content-sidebar #content{ width: 77.08%; }
+#content-full #content { width: 100%; }
+
+/* Adjust width of sidebar */
+.sidebar{ width: 20.83%; }
+
+/* fullwidth template */
+.page-template-template-fullwidth #content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+    .page-template-template-fullwidth #content ihf-search[data-eureka-id*=""].ihf-eureka {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+
+/* Adjust line height of page elements */
+#content h4, aside h4,
+#content p, aside p,
+#content blockquote, aside blockquote,
+#content ul, aside ul,
+#content fieldset, aside fieldset,
+#content form, aside form,
+#content ol, aside ol,
+#content dl, aside dl,
+#content dir, aside dir,
+#content menu, aside menu { line-height:1.7 }
+
+/* Style .entry-title(post/page) and .archive-title(category/archive/etc) main headings (h1) */
+#content .entry-title,
+#content .archive-title {
+
+}
+
+/* Styles for category/archive/search/etc subheadings (h2) */
+#content .archive-subtitle {
+
+}
+
+/* MEDIA QUERIES ARE AUTOMATICALLY REMOVED FROM THIS FILE, they must be placed in style-media-queries.css */
+
