@@ -58,5 +58,32 @@ function register_ai_child_starter_theme_sidebars() {
       'before_title' => '',
       'after_title' => ''
    ));
+
+   register_sidebar(array( 
+      'name' => 'AP Featured Properties',
+      'id'=>'ap-maven-featured-properties',
+      'before_widget' => '',
+      'after_widget' => '',
+      'before_title' => '',
+      'after_title' => ''
+   ));
+
+   register_sidebar(array( 
+      'name' => 'AP Featured Communities',
+      'id'=>'ap-maven-featured-communities',
+      'before_widget' => '',
+      'after_widget' => '',
+      'before_title' => '',
+      'after_title' => ''
+   ));
+
+   register_sidebar(array( 
+      'name' => 'AP Homepage Testimonials',
+      'id'=>'ap-maven-homepage-testimonials',
+      'before_widget' => '',
+      'after_widget' => '',
+      'before_title' => '',
+      'after_title' => ''
+   ));
 	
 }
