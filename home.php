@@ -57,4 +57,16 @@
 </section>
 <!-- End of Testimonial Section -->
 
+<!-- Start of CTA Section -->
+<section class="homepage-cta container-spacer">
+	<div class="cta-wrap">
+		<div class="container">
+			<!-- CTA Content -->
+			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('AP Call To Action') ) : ?>
+			<?php endif ?>
+		</div>
+	</div>
+</section>
+<!-- End of CTA Section -->
+
 <?php get_footer(); ?>

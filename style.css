@@ -830,6 +830,56 @@ section.featured-communities {
 }
 /* End of Homepage Testimonials */
 
+/* Start of CTA Buttons */
+.homepage-cta .cta-wrap {
+    background-color: var(--primary);
+    padding: 52px 0;
+}
+
+    .cta-wrap .cta-main-container {
+        display: flex;
+        width: 100%;
+        margin: 0 -1.32%;
+    }
+
+        .cta-main-container .cta {
+            width: calc(100%/3);
+            text-align: center;
+            padding: 0 1.32%;
+        }
+
+            .cta-main-container .cta a {
+                display: block;
+                border: 2px solid var(--primary-color-accent);
+                color: var(--secondary);
+                font-family: var(--font-family-title);
+                padding: 26px 0;
+                transition: all var(--transition-ease);
+            }
+
+                .cta-main-container .cta a:hover {
+                    background-color: var(--secondary);
+                    color: var(--primary);
+                }
+
+                .cta-main-container .cta a h3 {
+                    font-size: 24px;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    letter-spacing: 0.05em;
+                }
+
+                    .cta-main-container .cta a h3 span {
+                        display: block;
+                        font-size: 20px;
+                        font-family: var(--font-family-default);
+                        font-style: italic;
+                        font-weight: 400;
+                        text-transform: capitalize;
+                        padding-bottom: 10px;
+                    }
+/* End of CTA Buttons */
+
     
 /*******************************************************
  *
