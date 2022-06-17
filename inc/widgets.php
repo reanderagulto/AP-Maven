@@ -103,5 +103,23 @@ function register_ai_child_starter_theme_sidebars() {
       'before_title' => '',
       'after_title' => ''
    ));
+
+   register_sidebar(array( 
+      'name' => 'AP Footer Info',
+      'id'=>'ap-maven-footer-info',
+      'before_widget' => '',
+      'after_widget' => '',
+      'before_title' => '',
+      'after_title' => ''
+   ));
+
+   register_sidebar(array( 
+      'name' => 'AP Footer Copyright',
+      'id'=>'ap-maven-footer-copyright',
+      'before_widget' => '',
+      'after_widget' => '',
+      'before_title' => '',
+      'after_title' => ''
+   ));
 	
 }

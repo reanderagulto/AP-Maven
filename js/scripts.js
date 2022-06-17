@@ -33,7 +33,15 @@
 				variableWidth: true,
 				centerMode: true,
 				nextArrow: $('.slider-nav.btn-next'),
-				prevArrow: $('.slider-nav.btn-prev')
+				prevArrow: $('.slider-nav.btn-prev'), 
+				responsive: [{
+					breakpoint: 1199,
+					settings: {
+						slidesToShow: 1,
+						slidesToScroll: 1,
+						infinite: true
+					}
+				}]
 			});
 		},
 		initTestimonials: function() {

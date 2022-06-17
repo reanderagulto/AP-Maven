@@ -12,6 +12,11 @@
 
 /* iPad(portrait) | Galaxy Tab 4(portrait)  */ 
 @media only screen and (max-width: 991px) {
+
+	/* Mobile Header */
+	header.header{
+		
+	}
 	
 	/* The following are used on inner pages. Please edit carefully. */
 

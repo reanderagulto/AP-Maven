@@ -880,6 +880,275 @@ section.featured-communities {
                     }
 /* End of CTA Buttons */
 
+/* Start of Latest News */
+section.latest-news {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.latest-news-container .latest-news-wrap {
+    display: flex;
+    margin: 65px -1% 0;
+}
+
+    .latest-news-wrap .latest-news .news-image {
+        position: relative;
+    }
+
+        
+        .latest-news-wrap .latest-news .news-image img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center center;
+        }
+
+
+        .latest-news-wrap .latest-news .news-image canvas {
+            display: block;
+            width: 100%;
+        }
+
+    .latest-news-wrap .latest-news {
+        width: calc(100%/3);
+        padding: 0 1%;
+    }
+    
+    .latest-news a  {
+        background: var(--secondary);
+        color: var(--primary);
+        transition: all var(--transition-ease);
+        display: block;
+        border: 1px solid #d6d6d6;
+        padding-bottom: 35px;
+        min-height: 585px;
+    }
+
+        .latest-news a .news-content h3 {
+            font-size: 18px;
+            text-align: center;
+            padding: 35px 97px 0;
+            font-weight: 600;
+            font-family: var(--font-color-title);
+            line-height: 1.4;
+            color: var(--primary);
+            transition: all var(--transition-ease);
+            text-transform: uppercase;
+        }
+
+        .latest-news a .news-content p {
+            font-size: 15px;
+            padding: 20px 47px;
+            line-height: 1.5;
+            font-style: italic;
+            transition: all var(--transition-ease);
+            color: var(--primary);
+        }
+
+        .latest-news a .news-content span {
+            display: block;
+            margin: 0 auto;
+            max-width: 180px;
+            padding: 18px 0;
+            text-align: center;
+            transition: all .6s ease;
+        }
+
+        .latest-news a:hover {
+            background: var(--primary);
+        }
+
+        .latest-news a:hover .news-content h3,
+        .latest-news a:hover .news-content p{
+            color: var(--secondary);
+        }
+
+        .latest-news a .news-content span.btn.btn-default-white {
+            background-color: var(--secondary);
+            color: var(--primary);
+        }
+
+    .latest-news .latest-news-container h2.latest-news-header {
+        font-weight: 600;
+        font-family: var(--font-family-title);
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 35px;
+        letter-spacing: 0.05em;
+    }
+
+        .latest-news-header span {
+            display: block;
+            font-family: var(--font-family-lora);
+            text-transform: capitalize;
+            font-style: italic;
+            font-weight: 400;
+            font-size: 24px;
+            padding-bottom: 10px;
+        }
+/* End of Latest News */
+
+/* Start of Footer Information*/
+
+footer.footer {
+    color: var(--secondary);
+}
+
+.footer-info {
+    background: var(--primary);
+    padding: 102px 0 62px;
+}
+
+    .footer .footer-info h2 {
+        text-align: center;
+        font-size: 45px;
+        font-family: var(--font-family-title);
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        line-height: 1;
+        color: var(--secondary);
+    }
+
+ul.footer-contact-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 54px;
+}
+
+    ul.footer-contact-info li {
+        display: flex;
+        align-items: center;
+        font-size: 19px;
+        font-family: var(--font-family-title);
+        line-height: 1.4;
+        padding: 3px 20px;
+        justify-content: center;
+        font-weight: 400;
+    }
+
+    
+    .footer-contact-info li i {
+        flex-shrink: 0;
+        margin-right: 14px;
+    }
+
+        .footer-contact-info li i.ai-font-phone {
+            width: 13px;
+            height: 17px;
+            display: block;
+            font-size: 17px;
+        }
+
+        .footer-contact-info li i.ai-font-envelope {
+            width: 15px;
+            height: 11px;
+            font-size: 12px;
+        }
+
+        .footer-contact-info li i.ai-font-location-c {
+            width: 13px;
+            height: 20px;
+        }
+
+.footer .footer-logo-smi {
+    padding: 64px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    .footer-logo-smi .footer-broker-logo i.ai-font-sothebys {
+        color: var(--secondary);
+        font-size: 60px;
+    }
+
+    .footer-logo-smi .footer-smi {
+        margin-left: 47px;
+    }
+
+        .footer-logo-smi .footer-smi .footer-smi-wrap {
+            display: flex;
+            align-items: center;
+        }
+
+            .footer-smi .footer-smi-wrap a {
+                margin: 0 8px;
+                transition: all .6s ease;
+            }
+
+            .footer-smi .footer-smi-wrap a:hover {
+                opacity: 0.7;
+            }
+
+            .footer-smi .footer-smi-wrap a span {
+                font-size: 0;
+            }
+
+                .footer-smi .footer-smi-wrap a span i {
+                    display: block;
+                    width: 43px;
+                    height: 42px;
+                    font-size: 22px;
+                    background: var(--secondary);
+                    border-radius: 50%;
+                    text-align: center;
+                    line-height: 42px;
+                    color: var(--primary);
+                }
+
+.footer ul#menu-main-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+    .footer ul#menu-main-menu li {
+        font-family: var(--font-family-title);
+        padding: 0 36px;
+    }
+
+        .footer ul#menu-main-menu li a {
+            font-size: 16px;
+            font-weight: 400;
+            text-transform: uppercase;
+            color: var(--secondary);
+            transition: all .6s ease;
+            letter-spacing: 0.05em;
+        }
+
+            .footer ul#menu-main-menu li:hover a {
+                opacity: 0.6;
+            }
+/* End of Footer Information */
+
+/* Start of Footer Copyright */
+.footer-copyright {
+    background: var(--primary-color-accent);
+    padding: 40px 0;
+    text-align: center;
+}
+
+    .footer-copyright p {
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 1.7;
+        padding-top: 5px;
+        font-family: var(--font-family-title);
+    }
+
+    .footer-copyright .footer-copyright-logos {
+        color: var(--secondary);
+        padding-top: 17px;
+        font-size: 28px;
+    }
+/* End of Footer Copyright */
+
     
 /*******************************************************
  *

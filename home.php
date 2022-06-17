@@ -69,4 +69,12 @@
 </section>
 <!-- End of CTA Section -->
 
+<!-- Start of Latest News Section -->
+<section class="latest-news container-spacer">
+	<!-- Latest News Content -->
+	<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('AP Latest News') ) : ?>
+	<?php endif ?>
+</section>
+<!-- End of Latest News Section -->
+
 <?php get_footer(); ?>
